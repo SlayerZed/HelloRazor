@@ -1,0 +1,16 @@
+﻿@page
+@model HelloRazor.Pages.ProcessModel
+@{
+    string[]? people =  ViewData["People"] as string[];
+}
+
+<div>
+    <h2>Process Page</h2>
+    <h4>@ViewData["Message"]</h4>
+    <ul>
+        @foreach (var person in people!)
+        {
+            <li>@person</li>
+        }
+    </ul>
+</div>
